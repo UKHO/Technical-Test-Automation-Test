@@ -1,6 +1,6 @@
 ﻿namespace UKHO.Navigation.Books.API.Models;
 
-public class Book
+public class Book : IBook
 {
     public string Isbn { get; set; } = default!;
 
