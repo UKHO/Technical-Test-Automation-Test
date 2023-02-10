@@ -1,15 +1,12 @@
-﻿namespace UKHO.Navigation.Books.API.Tests.UnitTests;
+﻿using UKHO.Navigation.Books.API.Models;
+using UKHO.Navigation.Books.API.Validators;
+
+namespace UKHO.Navigation.Books.API.Tests.UnitTests;
 
 public class BookRulesTests
 {
-    
-    public void IsIsbnValid_WhenIsbnIsAGuid_ReturnsTrue()
+    public void IsValidPageCount_WhenValidInteger_ReturnsTrue()
     {
         
-    }
-
-    public void PageCountTests()
-    {
-
     }
 }

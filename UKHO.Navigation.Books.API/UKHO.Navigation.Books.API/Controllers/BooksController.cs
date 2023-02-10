@@ -23,13 +23,8 @@ public class BooksController : ControllerBase
     [HttpGet(Name = "GetAll")]
     public async Task<IActionResult> GetBooksAsync()
     {
-        //if (searchTerm is not null && !string.IsNullOrWhiteSpace(searchTerm))
-        //{
-        //    var matchedBooks = await bookService.SearchByTitleAsync(searchTerm);
-        //    return Results.Ok(matchedBooks);
-        //}
-
         var books = await _bookService.GetAllAsync();
+        
         return Ok(books);
     }
 
@@ -37,6 +32,7 @@ public class BooksController : ControllerBase
     public async Task<IActionResult> GetBookAsync(string isbn)
     {
         var book = await _bookService.GetByTraceIdAsync(isbn);
+        
         return book is not null ? Ok(book) : NotFound();
     }
 
@@ -62,6 +58,7 @@ public class BooksController : ControllerBase
     public async Task<IActionResult> DeleteBookAsync(string traceId)
     {
         var deleted = await _bookService.DeleteAsync(traceId);
+        
         return deleted ? NoContent() : NotFound();
     }
 }
