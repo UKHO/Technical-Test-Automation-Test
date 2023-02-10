@@ -20,19 +20,19 @@ public class BookService : IBookService
         using var connection = await _connectionFactory.CreateConnectionAsync();
         
         var result = await connection.ExecuteAsync(
-            @"INSERT INTO Books (Isbn, Title, Author, ShortDescription, PageCount, ReleaseDate) 
-                     VALUES (@Isbn, @Title, @Author, @ShortDescription, @PageCount, @ReleaseDate)", book);
+            @"INSERT INTO Books (Id, Title, Author, ShortDescription, PageCount, ReleaseDate) 
+                     VALUES (@Id, @Title, @Author, @ShortDescription, @PageCount, @ReleaseDate)", book);
 
         return result > 0;
     }
 
-    public async Task<Book?> GetByTraceIdAsync(string isbn)
+    public async Task<Book?> GetByTraceIdAsync(string id)
     {
         using var connection = await _connectionFactory.CreateConnectionAsync();
         return connection
             .QuerySingleOrDefault<Book>
-            ("SELECT * FROM Books WHERE Isbn = @Isbn LIMIT 1",
-                new { Isbn = isbn });
+            ("SELECT * FROM Books WHERE Id = @Id LIMIT 1",
+                new { Id = id });
     }
 
     public async Task<IEnumerable<Book>> GetAllAsync()
@@ -62,21 +62,21 @@ public class BookService : IBookService
             ShortDescription = @ShortDescription,
             PageCount = @PageCount,
             ReleaseDate = @ReleaseDate
-            WHERE Isbn = @Isbn", book);
+            WHERE Id = @Id", book);
 
         return result > 0;
     }
 
-    public async Task<bool> DeleteAsync(string isbn)
+    public async Task<bool> DeleteAsync(string id)
     {
         using var connection = await _connectionFactory.CreateConnectionAsync();
 
         var result = await connection.ExecuteAsync(
-            @"DELETE FROM Books WHERE Isbn = @Isbn", new { Isbn = isbn });
+            @"DELETE FROM Books WHERE Id = @Id", new { Id = id });
 
         return result > 0;
     }
 
-    private async Task<bool> DoesBookExist(Book book) => await GetByTraceIdAsync(book.Isbn) is null;
+    private async Task<bool> DoesBookExist(Book book) => await GetByTraceIdAsync(book.Id) is null;
     
 }

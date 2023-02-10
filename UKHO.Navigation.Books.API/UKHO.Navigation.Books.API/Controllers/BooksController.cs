@@ -48,7 +48,7 @@ public class BooksController : ControllerBase
         if (!created)
             return BadRequest(new List<ValidationFailure>
             {
-                new(nameof(book.Isbn), CreationErrorMessage)
+                new(nameof(book.Id), CreationErrorMessage)
             });
         
         return Created(nameof(GetBookAsync), book);

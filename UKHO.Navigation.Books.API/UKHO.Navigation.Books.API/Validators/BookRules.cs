@@ -11,11 +11,11 @@ public class BookRules
         _book = book;
     }
 
-    public bool IsIsbnValid()
+    public bool IsIdValid()
     {
-        var isbn = _book.Isbn;
+        var id = _book.Id;
 
-        return Guid.TryParse(isbn, out _);
+        return Guid.TryParse(id, out _);
     }
 
     public bool IsTitleValid()

@@ -5,9 +5,9 @@ namespace UKHO.Navigation.Books.API.Models;
 
 public class Book : IBook
 {
-    [JsonProperty("isbn")]
-    [JsonPropertyName("isbn")]
-    public string Isbn { get; set; } = default!;
+    [JsonProperty("id")]
+    [JsonPropertyName("id")]
+    public string Id { get; set; } = default!;
 
     [JsonProperty("title")]
     [JsonPropertyName("title")]

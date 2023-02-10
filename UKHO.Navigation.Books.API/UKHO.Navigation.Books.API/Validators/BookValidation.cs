@@ -7,9 +7,9 @@ public class BookValidator : AbstractValidator<Book>
 {
     public BookValidator()
     {
-        RuleFor(book => book.Isbn)
+        RuleFor(book => book.Id)
             .Must(BeAGuid)
-            .WithErrorCode("Isbn must be a guid");
+            .WithErrorCode("Id must be a guid");
 
         RuleFor(book => book.Title).NotEmpty();
         RuleFor(book => book.ShortDescription).NotEmpty();
@@ -17,8 +17,8 @@ public class BookValidator : AbstractValidator<Book>
         RuleFor(book => book.Author).NotEmpty();
     }
 
-    private bool BeAGuid(string isbn)
+    private bool BeAGuid(string id)
     {
-        return Guid.TryParse(isbn, out _);
+        return Guid.TryParse(id, out _);
     }
 }

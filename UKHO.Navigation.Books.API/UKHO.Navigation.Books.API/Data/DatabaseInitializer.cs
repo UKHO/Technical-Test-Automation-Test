@@ -16,7 +16,7 @@ public class DatabaseInitializer
         using var connection = await _connectionFactory.CreateConnectionAsync();
         await connection.ExecuteAsync(
             @"CREATE TABLE IF NOT EXISTS Books (
-                    Isbn TEXT NOT NULL,
+                    Id TEXT NOT NULL,
                     Title TEXT NOT NULL,
                     Author TEXT NOT NULL,
                     ShortDescription TEXT NOT NULL,
