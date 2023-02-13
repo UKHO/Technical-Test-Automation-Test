@@ -1,9 +1,7 @@
-﻿using System.Net;
-using System.Net.Http.Json;
+﻿using FluentAssertions;
+using System.Net;
 using System.Text;
 using System.Text.Json;
-using FluentAssertions;
-using NUnit.Framework;
 using UKHO.Navigation.Books.API.Models;
 
 namespace UKHO.Navigation.Books.API.Tests.IntegrationTests;

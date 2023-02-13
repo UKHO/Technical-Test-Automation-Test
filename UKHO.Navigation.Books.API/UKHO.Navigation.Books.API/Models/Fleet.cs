@@ -5,8 +5,5 @@ namespace UKHO.Navigation.Books.API.Models;
 
 public class Fleet
 {
-    [JsonProperty("battleships")]
-    [JsonPropertyName("id")]
-    public BattleShip[] Battleships { get; set; } = null!;
-    public CruiseShip[] CruiseShips { get; set; } = null!;
+    public IShip[] Ships { get; set; } = null!;
 }

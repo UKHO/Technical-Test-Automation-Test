@@ -26,7 +26,7 @@ public class BookService : IBookService
         return result > 0;
     }
 
-    public async Task<Book?> GetByTraceIdAsync(string id)
+    public async Task<Book?> GetByIdAsync(string id)
     {
         using var connection = await _connectionFactory.CreateConnectionAsync();
         return connection
@@ -77,6 +77,6 @@ public class BookService : IBookService
         return result > 0;
     }
 
-    private async Task<bool> DoesBookExist(Book book) => await GetByTraceIdAsync(book.Id) is null;
+    private async Task<bool> DoesBookExist(Book book) => await GetByIdAsync(book.Id) is null;
     
 }

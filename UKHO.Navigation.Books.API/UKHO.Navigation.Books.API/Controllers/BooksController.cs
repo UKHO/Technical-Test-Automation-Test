@@ -31,7 +31,7 @@ public class BooksController : ControllerBase
     [HttpGet("{id}")]
     public async Task<IActionResult> GetBookAsync(string id)
     {
-        var book = await _bookService.GetByTraceIdAsync(id);
+        var book = await _bookService.GetByIdAsync(id);
         
         return book is not null ? Ok(book) : NotFound();
     }
