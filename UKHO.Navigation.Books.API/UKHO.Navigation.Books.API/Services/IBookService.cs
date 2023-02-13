@@ -14,5 +14,5 @@ public interface IBookService
 
     public Task<bool> UpdateAsync(Book book);
 
-    public Task<bool> DeleteAsync(string isbn);
+    public Task<bool> DeleteAsync(string id);
 }

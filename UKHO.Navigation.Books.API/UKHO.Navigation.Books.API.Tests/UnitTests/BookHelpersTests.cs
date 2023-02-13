@@ -3,10 +3,15 @@ using UKHO.Navigation.Books.API.Validators;
 
 namespace UKHO.Navigation.Books.API.Tests.UnitTests;
 
-public class BookRulesTests
+public class BookHelpersTests
 {
     public void IsValidPageCount_WhenValidInteger_ReturnsTrue()
     {
         
+    }
+
+    public void GetBooksById_WhenGuidMatchesBookId_ReturnsMatchingBooks()
+    {
+
     }
 }

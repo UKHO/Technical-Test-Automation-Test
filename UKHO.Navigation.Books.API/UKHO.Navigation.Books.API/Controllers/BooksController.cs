@@ -12,7 +12,7 @@ public class BooksController : ControllerBase
     private readonly IBookService _bookService;
     private readonly IValidator<Book> _validator;
 
-    private const string CreationErrorMessage = "A book with his TraceId already exists";
+    private const string CreationErrorMessage = "A book with his ID already exists";
 
     public BooksController(IBookService bookService, IValidator<Book> validator)
     {
@@ -28,10 +28,10 @@ public class BooksController : ControllerBase
         return Ok(books);
     }
 
-    [HttpGet("{isbn}")]
-    public async Task<IActionResult> GetBookAsync(string isbn)
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetBookAsync(string id)
     {
-        var book = await _bookService.GetByTraceIdAsync(isbn);
+        var book = await _bookService.GetByTraceIdAsync(id);
         
         return book is not null ? Ok(book) : NotFound();
     }

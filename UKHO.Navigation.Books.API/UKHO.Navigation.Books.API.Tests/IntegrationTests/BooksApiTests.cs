@@ -1,23 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Net;
+using System.Net.Http.Json;
 using System.Text;
-using System.Threading.Tasks;
+using System.Text.Json;
+using FluentAssertions;
+using NUnit.Framework;
+using UKHO.Navigation.Books.API.Models;
 
 namespace UKHO.Navigation.Books.API.Tests.IntegrationTests;
 
 internal class BooksApiTests
 {
-    private const string BaseUrl = "https://localhost:5001/books";
+    private readonly HttpClient _client;
 
-    private const string ShetlandIslandsBookId = "f066bcfc-f0fe-4ccb-9966-b1999c78ddb9";
+    public BooksApiTests()
+    {
+        var factory = new APIWebApplicationFactory();
+        _client = factory.CreateClient();
+    }
 
-    //When I make a Get request to base url
-    //Then I am returned a Ok Http Status
-    //Write Test here
+    public async Task CreateBook_WhenRequestIsValid_ReturnsHttpStatusCreated()
+    {
+        var book = new Book
+        {
+            Id = "eec7c4e8-eb2f-43f4-8b83-2729f27eccf1",
+            Title = "Test Book Title",
+            Author = "Test Author",
+            ShortDescription = "This is a short test description",
+            PageCount = 419,
+            ReleaseDate = DateTime.Now,
+        };
 
+        var json = JsonSerializer.Serialize(book);
 
-    //When I make a Get request books/{isbn} endpoint using the ShetlandIslandsBookId
-    //Then I am returned the Shetland Islands Book
-    //Write Test here
+        var response = await _client.PostAsync("/Books", 
+            new StringContent(json, Encoding.UTF8, "application/json"));
+
+        response.StatusCode.Should().Be(HttpStatusCode.Created);
+    }
 }
