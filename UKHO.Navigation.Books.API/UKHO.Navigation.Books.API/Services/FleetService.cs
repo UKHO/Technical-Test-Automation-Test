@@ -3,7 +3,6 @@ using UKHO.Navigation.Books.API.Validators;
 
 namespace UKHO.Navigation.Books.API.Services;
 
-//Legacy code
 public class FleetService
 {
     private readonly IFleetValidator _validator;

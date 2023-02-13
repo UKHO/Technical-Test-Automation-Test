@@ -6,6 +6,7 @@ public class FleetServiceTests
 {
     //Test ValidateFleet_WhenValidCollectionOfShips_ThenFleetIsNotNull
 
+
     private List<IShip> GetValidCollectionOfShips()
     {
         return new List<IShip>
