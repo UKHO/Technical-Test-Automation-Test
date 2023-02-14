@@ -14,7 +14,6 @@ public class FleetServiceTests
             new BattleShip
             {
                 Name = "TestBattleShip",
-                Helipad = false,
                 LengthInMeters = 100,
                 NumberOfGuns = 30
 

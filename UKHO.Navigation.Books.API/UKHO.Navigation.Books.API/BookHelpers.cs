@@ -18,13 +18,13 @@ public class BookHelpers
         return pageCount is > 0 and < 9999;
     }
 
-    public IList<Book> GetBooksById(Guid id, IList<Book> listOfBooks)
+    public IList<Book> FindMatchingBooks(IList<Book> listOfBooks)
     {
         var matchingBookings = new List<Book>();
 
         foreach (var book in listOfBooks)
         {
-            if (book.Id == id.ToString())
+            if (book.Id == _book.Id)
             {
                 matchingBookings.Add(book);
             }
