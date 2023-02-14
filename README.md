@@ -21,9 +21,7 @@ However the Developer has not written any unit tests?! You first task will be to
 
 * Go to the UKHO.Navigation.Books.API.Tests and use Nuget to pull in a test framework of your choosing. e.g. (NUnit, XUnit, MsTest)
 * Go to the BookHelpersTests.cs class and finish the unit test IsValidPageCount_WhenValidInteger_ReturnsTrue().
-* And then BookRulesTests.cs class and finish the unit test GetBooksById_WhenGuidMatchesBookId_ReturnsMatchingBooks().
 * Go to the FleetServiceTests class and finish the  ValidateFleet_WhenValidCollectionOfShips_ThenFleetIsNotNull().
-
 
 #### Scenario 2
 

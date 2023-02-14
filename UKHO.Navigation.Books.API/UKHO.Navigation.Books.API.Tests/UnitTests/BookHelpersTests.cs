@@ -9,9 +9,4 @@ public class BookHelpersTests
     {
         
     }
-
-    public void GetBooksById_WhenGuidMatchesBookId_ReturnsMatchingBooks()
-    {
-
-    }
 }
