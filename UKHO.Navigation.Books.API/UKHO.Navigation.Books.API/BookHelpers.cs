@@ -1,6 +1,6 @@
 ﻿using UKHO.Navigation.Books.API.Models;
 
-namespace UKHO.Navigation.Books.API.Validators;
+namespace UKHO.Navigation.Books.API;
 
 public class BookHelpers
 {

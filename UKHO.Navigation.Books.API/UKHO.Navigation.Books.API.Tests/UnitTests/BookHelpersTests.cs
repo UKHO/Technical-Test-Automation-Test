@@ -1,5 +1,5 @@
 ﻿using UKHO.Navigation.Books.API.Models;
-using UKHO.Navigation.Books.API.Validators;
+using UKHO.Navigation.Books.API;
 
 namespace UKHO.Navigation.Books.API.Tests.UnitTests;
 
