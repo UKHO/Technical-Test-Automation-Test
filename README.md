@@ -13,7 +13,7 @@ You will be pairing with a Test Engineer from UKHO who will guide you through th
 #### Scenario 1
 
 A developer has been given the task of writing some new Book functions for the UKHO.Navigation.Books.API. 
-The developer has created some written the code in UKHO.Navigation.Books.API/BookHelpers.cs.
+The developer has created the UKHO.Navigation.Books.API/BookHelpers.cs class and the UKHO.Navigation.Books.API/Services/FleetService.cs class.
 
 However the Developer has not written any unit tests?! You first task will be to write some happy path unit tests for the new code.
 
@@ -21,11 +21,11 @@ However the Developer has not written any unit tests?! You first task will be to
 
 * Go to the UKHO.Navigation.Books.API.Tests and use Nuget to pull in a test framework of your choosing. e.g. (NUnit, XUnit, MsTest)
 * Go to the BookHelpersTests.cs class and finish the unit test IsValidPageCount_WhenValidInteger_ReturnsTrue().
-* Go to the FleetServiceTests class and finish the  ValidateFleet_WhenValidCollectionOfShips_ThenFleetIsNotNull().
+* Go to the FleetServiceTests.cs class and finish the  ValidateFleet_WhenValidCollectionOfShips_ThenFleetIsNotNull().
 
 #### Scenario 2
 
-To ensure the API responses correctly a developer has written an integration test for the api.
+To ensure the API responses correctly a developer has written an integration test for the API.
 
 ##### Tasks
 
