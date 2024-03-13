@@ -2,17 +2,18 @@
 using System.Net;
 using System.Text;
 using System.Text.Json;
+using NUnit.Framework;
 using UKHO.Navigation.Books.API.Models;
 
 namespace UKHO.Navigation.Books.API.Tests.IntegrationTests;
 
-internal class BooksApiTests
+public class BooksPostApiTests
 {
     private readonly HttpClient _client;
 
-    public BooksApiTests()
+    public BooksPostApiTests()
     {
-        var factory = new APIWebApplicationFactory();
+        var factory = new ApiWebApplicationFactory();
         _client = factory.CreateClient();
     }
 
@@ -30,7 +31,7 @@ internal class BooksApiTests
 
         var json = JsonSerializer.Serialize(book);
 
-        var response = await _client.PostAsync("/Books", 
+        var response = await _client.PostAsync("/books", 
             new StringContent(json, Encoding.UTF8, "application/json"));
 
         response.StatusCode.Should().Be(HttpStatusCode.Created);

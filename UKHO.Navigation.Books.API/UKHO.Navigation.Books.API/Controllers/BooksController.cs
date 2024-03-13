@@ -6,7 +6,6 @@ using UKHO.Navigation.Books.API.Services;
 
 namespace UKHO.Navigation.Books.API.Controllers;
 [ApiController]
-[Route("[controller]")]
 public class BooksController : ControllerBase
 {
     private readonly IBookService _bookService;
@@ -20,7 +19,8 @@ public class BooksController : ControllerBase
         _validator = validator;
     }
 
-    [HttpGet(Name = "GetAll")]
+    [HttpGet]
+    [Route("/books/get-all")]
     public async Task<IActionResult> GetBooksAsync()
     {
         var books = await _bookService.GetAllAsync();
@@ -28,7 +28,8 @@ public class BooksController : ControllerBase
         return Ok(books);
     }
 
-    [HttpGet("{id}")]
+    [HttpGet]
+    [Route("/books/{id}")]
     public async Task<IActionResult> GetBookAsync(string id)
     {
         var book = await _bookService.GetByIdAsync(id);
@@ -37,6 +38,7 @@ public class BooksController : ControllerBase
     }
 
     [HttpPost]
+    [Route("/books")]
     public async Task<IActionResult> CreateBookAsync(Book book)
     {
         var validationResult = await _validator.ValidateAsync(book);
@@ -55,9 +57,10 @@ public class BooksController : ControllerBase
     }
 
     [HttpDelete]
-    public async Task<IActionResult> DeleteBookAsync(string traceId)
+    [Route("/books/{id}")]
+    public async Task<IActionResult> DeleteBookAsync(string id)
     {
-        var deleted = await _bookService.DeleteAsync(traceId);
+        var deleted = await _bookService.DeleteAsync(id);
         
         return deleted ? NoContent() : NotFound();
     }

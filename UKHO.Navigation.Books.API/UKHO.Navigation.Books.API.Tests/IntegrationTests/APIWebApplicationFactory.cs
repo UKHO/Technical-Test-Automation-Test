@@ -2,7 +2,7 @@
 
 namespace UKHO.Navigation.Books.API.Tests.IntegrationTests;
 
-internal class APIWebApplicationFactory : WebApplicationFactory<Program>
+internal class ApiWebApplicationFactory : WebApplicationFactory<IAPIMarker>
 {
 
 }
