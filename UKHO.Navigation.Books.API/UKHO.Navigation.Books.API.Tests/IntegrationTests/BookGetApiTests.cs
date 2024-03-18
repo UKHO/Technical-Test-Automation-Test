@@ -1,4 +1,8 @@
-﻿namespace UKHO.Navigation.Books.API.Tests.IntegrationTests;
+﻿using System.Text.Json;
+using FluentAssertions;
+using UKHO.Navigation.Books.API.Models;
+
+namespace UKHO.Navigation.Books.API.Tests.IntegrationTests;
 
 public class BookGetApiTests
 {
@@ -12,7 +16,7 @@ public class BookGetApiTests
     
     // Instructions:
     // 1. Add a test framework of your choice.
-    // 2. Add an additional test to verify that the below book exists using the GetBook or GetBooks endpoint.
+    // 2. Add an additional test to verify that the below book exists using the books/{id} or books/get-all endpoint.
  
     // var expectedBook = new Book
     // {
@@ -23,4 +27,5 @@ public class BookGetApiTests
     //     PageCount = 500,
     //     ReleaseDate = new DateTime(2019, 04, 13),
     // };
+
 }

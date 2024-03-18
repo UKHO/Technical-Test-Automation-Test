@@ -2,7 +2,6 @@
 using System.Net;
 using System.Text;
 using System.Text.Json;
-using NUnit.Framework;
 using UKHO.Navigation.Books.API.Models;
 
 namespace UKHO.Navigation.Books.API.Tests.IntegrationTests;
