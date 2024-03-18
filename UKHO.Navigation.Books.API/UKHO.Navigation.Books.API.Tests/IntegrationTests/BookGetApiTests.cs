@@ -17,6 +17,7 @@ public class BookGetApiTests
     // Instructions:
     // 1. Add a test framework of your choice.
     // 2. Add an additional test to verify that the below book exists using the books/{id} or books/get-all endpoint.
+    // Note: The above HttpClient is configured with the api base address 
  
     // var expectedBook = new Book
     // {
