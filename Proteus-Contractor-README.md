@@ -20,7 +20,7 @@ However the Developer has not written any integration tests?! You task will be t
 
 * Go to the UKHO.Navigation.Books.API.Tests and use NuGet to pull in a test framework of your choosing. e.g. (NUnit, XUnit, MsTest)
 * Go to the UKHO.Navigation.Books.API.Tests/IntegrationTests/BookGetApiTests.cs class.
-* Write a new test to verify that the below book exists using the the books/{id} or books/get-all endpoints.
+* Write a new test to verify that the below book exists using either the books/{id} endpoint or books/get-all endpoint.
 
 ```csharp
 var expectedBook = new Book
