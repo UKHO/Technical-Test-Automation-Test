@@ -11,6 +11,8 @@ public class BookGetApiTestsSenior
 {
     private readonly HttpClient _httpClient;
     private readonly RestClient _restClient;
+    
+    //endpoint books/{id}
 
     public BookGetApiTestsSenior()
     {
@@ -26,8 +28,9 @@ public class BookGetApiTestsSenior
     }
     
     // Instructions:
-    // 1. Add a test framework of your choice.
-    // 2. Add a test to verify that the below book with id "d0bf11de-b97b-4fcb-b84d-e0ff18119e08" has the title "Los Angeles and Long Beach Harbors" using the books/{id} endpoint 
+    // 1. Add a test framework of your choice from nuget.
+    // 2. Add a test to verify that the below book with id "d0bf11de-b97b-4fcb-b84d-e0ff18119e08" has the title "Los Angeles and Long Beach Harbors" using the books/{id} endpoint.
+    // 3. Run the test and ensure it passes successfully.
     // Note: The above HttpClient and RestClient are configured with the api base address, please use the client you are most conformable with. 
  
     // var expectedBook = new Book
