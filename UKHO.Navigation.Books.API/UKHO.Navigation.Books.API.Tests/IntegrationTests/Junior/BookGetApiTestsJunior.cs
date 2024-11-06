@@ -24,7 +24,7 @@ public class BookGetApiTestsJunior
     }
     
     // Instructions:
-    // 1. Add a test framework of your choice.
+    // 1. Add a test framework of your choice using nuget.
     // 2. Add a test to verify that the books/get-all endpoint returns a 200 OK response
     // Note: The above HttpClient and RestClient are configured with the api base address please use the client you are most conformable with. 
  }
