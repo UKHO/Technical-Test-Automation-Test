@@ -1,4 +1,5 @@
 ﻿using RestSharp;
+using UKHO.Navigation.Books.API.Models;
 
 namespace UKHO.Navigation.Books.API.Tests.IntegrationTests.Junior;
 
