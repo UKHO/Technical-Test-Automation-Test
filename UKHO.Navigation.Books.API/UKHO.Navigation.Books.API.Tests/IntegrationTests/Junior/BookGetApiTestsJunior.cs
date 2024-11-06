@@ -7,6 +7,8 @@ public class BookGetApiTestsJunior
     private readonly HttpClient _httpClient;
     private readonly RestClient _restClient;
 
+    // endpoint books/get-all
+    
     public BookGetApiTestsJunior()
     {
         var factory = new ApiWebApplicationFactory();
