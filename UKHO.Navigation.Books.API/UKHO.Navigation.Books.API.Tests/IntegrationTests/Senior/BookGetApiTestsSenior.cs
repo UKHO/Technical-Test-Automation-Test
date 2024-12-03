@@ -2,6 +2,7 @@
 using System.Text.Json;
 using FluentAssertions;
 using RestSharp;
+using System.Net.Http.Json;
 using UKHO.Navigation.Books.API.Models;
 
 
@@ -12,8 +13,6 @@ public class BookGetApiTestsSenior
     private readonly HttpClient _httpClient;
     private readonly RestClient _restClient;
     
-    //endpoint books/{id}
-
     public BookGetApiTestsSenior()
     {
         var factory = new ApiWebApplicationFactory();
@@ -26,6 +25,8 @@ public class BookGetApiTestsSenior
         };
         _restClient = new RestClient(options);
     }
+    
+    //endpoint for book: "books/d0bf11de-b97b-4fcb-b84d-e0ff18119e08"
     
     // Instructions:
     // 1. Add a test framework of your choice from nuget.
