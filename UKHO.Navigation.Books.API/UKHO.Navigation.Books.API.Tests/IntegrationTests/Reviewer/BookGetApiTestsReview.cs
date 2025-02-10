@@ -13,14 +13,6 @@ namespace UKHO.Navigation.Books.API.Tests.IntegrationTests.Senior;
 public class BookGetApiTestsReview
 {
     private readonly HttpClient _httpClient;
-    //private readonly RestClient _restClient;
-
-    // don't automatically marshall the response
-    // badly named methods
-    // check the status code weirdly
-    // no assertions
-    // check the wrong return type?
-
 
     public BookGetApiTestsReview()
     {
