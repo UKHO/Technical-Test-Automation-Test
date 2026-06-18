@@ -1,12 +1,14 @@
-﻿using UKHO.Navigation.Books.API.Models;
-using UKHO.Navigation.Books.API;
-
-namespace UKHO.Navigation.Books.API.Tests.UnitTests;
+﻿namespace UKHO.Navigation.Books.API.Tests.UnitTests;
 
 public class BookHelpersTests
 {
-    public void IsValidPageCount_WhenValidInteger_ReturnsTrue()
-    {
-        
+    public void IsPageCountValid_WhenPageCountIsAtBoundary_ReturnsExpectedResult()
+    { 
+
+    }
+
+    public void FindMatchingBooks_WhenBookWithSameIdExists_ReturnsMatchingBook()
+    { 
+
     }
 }
