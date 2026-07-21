@@ -12,20 +12,21 @@ You will be pairing with a Test Engineer from UKHO who will guide you through th
 
 #### Scenario 1
 
-A developer has been given the task of writing some new Book functions for the UKHO.Navigation.Books.API. 
+A developer has been given the task of writing some new functions for the UKHO.Navigation.Books.API. 
 The developer has created the UKHO.Navigation.Books.API/BookHelpers.cs class and the UKHO.Navigation.Books.API/Services/FleetService.cs class.
 
-However the Developer has not written any unit tests?! You first task will be to write some happy/sad path unit tests for the new code.
+However the Developer has not written any unit tests! Your first task will be to write some happy/sad path unit tests for the new code.
 
 ##### Tasks
 
-* Go to the UKHO.Navigation.Books.API.Tests and use Nuget to pull in a test framework of your choosing. e.g. (NUnit, XUnit, MsTest).
+ - Go to the UKHO.Navigation.Books.API.Tests and use Nuget to pull in a test framework of your choosing. e.g. (NUnit, XUnit, MsTest).
 
-* Go to the BookHelpersTests.cs class. Finish test IsPageCountValid_WhenPageCountIsAtBoundary_ReturnsExpectedResult. Use multiple test cases to test boundary conditions.
+- Go to the BookHelpersTests.cs class. 
+  - Finish test IsPageCountValid_WhenPageCountIsAtBoundary_ReturnsExpectedResult. Use multiple test cases to test boundary conditions.
+  - Finish test FindMatchingBooks_WhenBookWithSameIdExists_ReturnsMatchingBook.
 
-* Finish test FindMatchingBooks_WhenBookWithSameIdExists_ReturnsMatchingBook.
-
-* Go to the FleetServiceTests.cs class and finish the ValidateFleetAsync_WhenFleetIsInvalid_ThrowsInvalidOperationException().
+- Go to the FleetServiceTests.cs class.
+  - Finish the ValidateFleetAsync_WhenFleetIsInvalid_ThrowsInvalidOperationException().
 
 #### Scenario 2
 
@@ -33,6 +34,7 @@ To ensure the API responses correctly a developer has written an integration tes
 
 ##### Tasks
 
-* Review the API test with the Test engineer and see if it can be improved. 
+Review the API test with the Test engineer and see if it can be improved. 
 
-
+ - Refactor the tests to make them more reliable and readable. 
+ - Test the DeleteBook endpoint .
