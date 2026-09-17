@@ -4,11 +4,11 @@
 
 This readme.md will give you an overview of the tasks we will be completing over the next 30 minutes.
 
-You will be pairing with a Test Engineer from UKHO who will guide you through the test. Please feel free to ask any questions or clarifications you require.
+You will be pairing with an Engineer from UKHO who will guide you through the test. Please feel free to ask any questions or clarifications you require.
 
 #### Set up
 * After pulling the solution you will be asked to build and run the API - this is to ensure the API runs as expected and is not part of the assessment.
-* The Test Engineer will give you a brief overview of the solution and the scenarios.
+* The Engineer will give you a brief overview of the solution and the scenarios.
 
 #### Scenario 1
 
@@ -22,19 +22,18 @@ However the Developer has not written any unit tests! Your first task will be to
  - Go to the UKHO.Navigation.Books.API.Tests and use Nuget to pull in a test framework of your choosing. e.g. (NUnit, XUnit, MsTest).
 
 - Go to the BookHelpersTests.cs class. 
-  - Finish test IsPageCountValid_WhenPageCountIsAtBoundary_ReturnsExpectedResult. Use multiple test cases to test boundary conditions.
   - Finish test FindMatchingBooks_WhenBookWithSameIdExists_ReturnsMatchingBook.
 
 - Go to the FleetServiceTests.cs class.
   - Finish the ValidateFleetAsync_WhenFleetIsInvalid_ThrowsInvalidOperationException().
+  - Use mocking library if preferred, or create concrete objects.
 
 #### Scenario 2
 
-To ensure the API responses correctly a developer has written an integration test for the API.
+To ensure the API responds correctly a developer has written an integration test for the API.
 
 ##### Tasks
 
 Review the API test with the Test engineer and see if it can be improved. 
 
- - Refactor the tests to make them more reliable and readable. 
- - Test the DeleteBook endpoint .
+ - Review BookGetApiTestsReview.cs to make tests more reliable and readable. 

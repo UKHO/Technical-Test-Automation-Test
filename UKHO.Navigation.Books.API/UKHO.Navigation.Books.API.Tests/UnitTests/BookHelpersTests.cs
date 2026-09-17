@@ -2,13 +2,8 @@
 
 public class BookHelpersTests
 {
-    public void IsPageCountValid_WhenPageCountIsAtBoundary_ReturnsExpectedResult()
-    { 
-
-    }
-
     public void FindMatchingBooks_WhenBookWithSameIdExists_ReturnsMatchingBook()
-    { 
-
+    {
+        
     }
 }

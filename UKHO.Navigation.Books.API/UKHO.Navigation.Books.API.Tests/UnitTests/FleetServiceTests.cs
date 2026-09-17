@@ -2,9 +2,8 @@
 
 public class FleetServiceTests
 {
-    public void ValidateFleetAsync_WhenFleetIsInvalid_ThrowsInvalidOperationException()
-    {
-
+    public async Task ValidateFleetAsync_WhenFleetIsInvalid_ThrowsInvalidOperationException()
+    { 
+ 
     }
-
 }

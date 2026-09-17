@@ -26,7 +26,7 @@ public class BookHelpers
         {
             if (book.Id == _book.Id)
             {
-                matchingBookings.Add(book);
+                matchingBookings.Add(_book);
             }
         }
 
